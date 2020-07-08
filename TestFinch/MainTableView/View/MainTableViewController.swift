@@ -29,6 +29,8 @@ final class MainTableViewController: UIViewController {
     
     private func drawSelf() {
         
+        view.backgroundColor = .red
+        
     }
 }
 

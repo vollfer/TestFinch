@@ -60,8 +60,8 @@
 		124893F324B60C6F0016531F /* TestFinch */ = {
 			isa = PBXGroup;
 			children = (
-				1248940C24B60E000016531F /* MainTableView */,
 				1248940B24B60DB60016531F /* AppDelegate */,
+				1248940C24B60E000016531F /* MainTableView */,
 				1248940024B60C720016531F /* Assets.xcassets */,
 				1248940224B60C720016531F /* LaunchScreen.storyboard */,
 				1248940524B60C720016531F /* Info.plist */,
