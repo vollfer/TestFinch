@@ -11,10 +11,23 @@
 		124893FF24B60C6F0016531F /* TestFinch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 124893FD24B60C6F0016531F /* TestFinch.xcdatamodeld */; };
 		1248940124B60C720016531F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1248940024B60C720016531F /* Assets.xcassets */; };
 		1248940424B60C720016531F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1248940224B60C720016531F /* LaunchScreen.storyboard */; };
-		1248941224B60E750016531F /* MainTableViewAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941124B60E750016531F /* MainTableViewAssemble.swift */; };
-		1248941424B60ED30016531F /* MainTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941324B60ED30016531F /* MainTableViewPresenter.swift */; };
-		1248941624B60EEA0016531F /* MainTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941524B60EEA0016531F /* MainTableViewRouter.swift */; };
-		1248941824B60F2E0016531F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941724B60F2E0016531F /* MainTableViewController.swift */; };
+		1248941224B60E750016531F /* MenuViewAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941124B60E750016531F /* MenuViewAssemble.swift */; };
+		1248941424B60ED30016531F /* MenuViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941324B60ED30016531F /* MenuViewPresenter.swift */; };
+		1248941624B60EEA0016531F /* MenuViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941524B60EEA0016531F /* MenuViewRouter.swift */; };
+		1248941824B60F2E0016531F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941724B60F2E0016531F /* MenuViewController.swift */; };
+		1248941A24B62E1E0016531F /* MenuTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941924B62E1E0016531F /* MenuTableViewManager.swift */; };
+		1248941C24B62E350016531F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248941B24B62E350016531F /* MainTableViewCell.swift */; };
+		1248942324B652580016531F /* MenuToAddPersonAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942224B652580016531F /* MenuToAddPersonAssemble.swift */; };
+		1248942524B6529E0016531F /* MenuToAddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942424B6529E0016531F /* MenuToAddPersonView.swift */; };
+		1248942724B652BF0016531F /* MenuToAddPersonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */; };
+		1248942924B652CE0016531F /* MenuToAddPersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */; };
+		12631BDC24B744500047C426 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BDB24B744500047C426 /* Person.swift */; };
+		12631BE324B767A10047C426 /* AboutCellAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE224B767A10047C426 /* AboutCellAssemble.swift */; };
+		12631BE524B767AC0047C426 /* AboutCellRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE424B767AC0047C426 /* AboutCellRouter.swift */; };
+		12631BE724B767C40047C426 /* AboutCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE624B767C40047C426 /* AboutCellViewController.swift */; };
+		12631BE924B767EC0047C426 /* AboutCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE824B767EC0047C426 /* AboutCellPresenter.swift */; };
+		12631BEC24B87F050047C426 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BEB24B87F050047C426 /* Protocol.swift */; };
+		12631BEE24BA05B90047C426 /* Extension UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BED24BA05B90047C426 /* Extension UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +37,23 @@
 		1248940024B60C720016531F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1248940324B60C720016531F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1248940524B60C720016531F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1248941124B60E750016531F /* MainTableViewAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewAssemble.swift; sourceTree = "<group>"; };
-		1248941324B60ED30016531F /* MainTableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewPresenter.swift; sourceTree = "<group>"; };
-		1248941524B60EEA0016531F /* MainTableViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewRouter.swift; sourceTree = "<group>"; };
-		1248941724B60F2E0016531F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		1248941124B60E750016531F /* MenuViewAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewAssemble.swift; sourceTree = "<group>"; };
+		1248941324B60ED30016531F /* MenuViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewPresenter.swift; sourceTree = "<group>"; };
+		1248941524B60EEA0016531F /* MenuViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewRouter.swift; sourceTree = "<group>"; };
+		1248941724B60F2E0016531F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1248941924B62E1E0016531F /* MenuTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewManager.swift; path = ../../../../../Documents/MenuTableViewManager.swift; sourceTree = "<group>"; };
+		1248941B24B62E350016531F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = ../../../../../Documents/MainTableViewCell.swift; sourceTree = "<group>"; };
+		1248942224B652580016531F /* MenuToAddPersonAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonAssemble.swift; path = ../../../../../Documents/MenuToAddPersonAssemble.swift; sourceTree = "<group>"; };
+		1248942424B6529E0016531F /* MenuToAddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonView.swift; path = ../../../../../Documents/MenuToAddPersonView.swift; sourceTree = "<group>"; };
+		1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonRouter.swift; path = ../../../../../Documents/MenuToAddPersonRouter.swift; sourceTree = "<group>"; };
+		1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonPresenter.swift; path = ../../../../../Documents/MenuToAddPersonPresenter.swift; sourceTree = "<group>"; };
+		12631BDB24B744500047C426 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		12631BE224B767A10047C426 /* AboutCellAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellAssemble.swift; sourceTree = "<group>"; };
+		12631BE424B767AC0047C426 /* AboutCellRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellRouter.swift; sourceTree = "<group>"; };
+		12631BE624B767C40047C426 /* AboutCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellViewController.swift; sourceTree = "<group>"; };
+		12631BE824B767EC0047C426 /* AboutCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellPresenter.swift; sourceTree = "<group>"; };
+		12631BEB24B87F050047C426 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		12631BED24BA05B90047C426 /* Extension UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +86,10 @@
 		124893F324B60C6F0016531F /* TestFinch */ = {
 			isa = PBXGroup;
 			children = (
+				12631BEA24B87EDD0047C426 /* Protocol */,
 				1248940B24B60DB60016531F /* AppDelegate */,
+				12631BDD24B766850047C426 /* AboutCell */,
+				1248941D24B651A30016531F /* MenuToAdd */,
 				1248940C24B60E000016531F /* MainTableView */,
 				1248940024B60C720016531F /* Assets.xcassets */,
 				1248940224B60C720016531F /* LaunchScreen.storyboard */,
@@ -92,7 +121,7 @@
 		1248940D24B60E110016531F /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				1248941524B60EEA0016531F /* MainTableViewRouter.swift */,
+				1248941524B60EEA0016531F /* MenuViewRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -100,7 +129,7 @@
 		1248940E24B60E150016531F /* Presenter  */ = {
 			isa = PBXGroup;
 			children = (
-				1248941324B60ED30016531F /* MainTableViewPresenter.swift */,
+				1248941324B60ED30016531F /* MenuViewPresenter.swift */,
 			);
 			path = "Presenter ";
 			sourceTree = "<group>";
@@ -108,7 +137,9 @@
 		1248940F24B60E180016531F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1248941724B60F2E0016531F /* MainTableViewController.swift */,
+				1248941724B60F2E0016531F /* MenuViewController.swift */,
+				1248941924B62E1E0016531F /* MenuTableViewManager.swift */,
+				1248941B24B62E350016531F /* MainTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,9 +147,113 @@
 		1248941024B60E1E0016531F /* Assemble */ = {
 			isa = PBXGroup;
 			children = (
-				1248941124B60E750016531F /* MainTableViewAssemble.swift */,
+				1248941124B60E750016531F /* MenuViewAssemble.swift */,
 			);
 			path = Assemble;
+			sourceTree = "<group>";
+		};
+		1248941D24B651A30016531F /* MenuToAdd */ = {
+			isa = PBXGroup;
+			children = (
+				12631BDA24B744250047C426 /* Entity */,
+				1248942124B651CE0016531F /* Assemble */,
+				1248942024B651CB0016531F /* View */,
+				1248941E24B651C20016531F /* Presenter */,
+				1248941F24B651C70016531F /* Router */,
+			);
+			path = MenuToAdd;
+			sourceTree = "<group>";
+		};
+		1248941E24B651C20016531F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1248941F24B651C70016531F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1248942024B651CB0016531F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1248942424B6529E0016531F /* MenuToAddPersonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1248942124B651CE0016531F /* Assemble */ = {
+			isa = PBXGroup;
+			children = (
+				1248942224B652580016531F /* MenuToAddPersonAssemble.swift */,
+			);
+			path = Assemble;
+			sourceTree = "<group>";
+		};
+		12631BDA24B744250047C426 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				12631BDB24B744500047C426 /* Person.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		12631BDD24B766850047C426 /* AboutCell */ = {
+			isa = PBXGroup;
+			children = (
+				12631BE124B767710047C426 /* Presenter */,
+				12631BE024B7676B0047C426 /* View */,
+				12631BDF24B767610047C426 /* Router */,
+				12631BDE24B767540047C426 /* Assemble */,
+			);
+			path = AboutCell;
+			sourceTree = "<group>";
+		};
+		12631BDE24B767540047C426 /* Assemble */ = {
+			isa = PBXGroup;
+			children = (
+				12631BE224B767A10047C426 /* AboutCellAssemble.swift */,
+			);
+			path = Assemble;
+			sourceTree = "<group>";
+		};
+		12631BDF24B767610047C426 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				12631BE424B767AC0047C426 /* AboutCellRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		12631BE024B7676B0047C426 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12631BE624B767C40047C426 /* AboutCellViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12631BE124B767710047C426 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				12631BE824B767EC0047C426 /* AboutCellPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		12631BEA24B87EDD0047C426 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				12631BEB24B87F050047C426 /* Protocol.swift */,
+				12631BED24BA05B90047C426 /* Extension UIView.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,12 +326,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1248941224B60E750016531F /* MainTableViewAssemble.swift in Sources */,
+				1248941224B60E750016531F /* MenuViewAssemble.swift in Sources */,
 				124893F524B60C6F0016531F /* AppDelegate.swift in Sources */,
+				12631BE724B767C40047C426 /* AboutCellViewController.swift in Sources */,
+				1248941C24B62E350016531F /* MainTableViewCell.swift in Sources */,
+				1248942524B6529E0016531F /* MenuToAddPersonView.swift in Sources */,
+				12631BEC24B87F050047C426 /* Protocol.swift in Sources */,
+				1248941A24B62E1E0016531F /* MenuTableViewManager.swift in Sources */,
+				1248942924B652CE0016531F /* MenuToAddPersonPresenter.swift in Sources */,
+				1248942724B652BF0016531F /* MenuToAddPersonRouter.swift in Sources */,
 				124893FF24B60C6F0016531F /* TestFinch.xcdatamodeld in Sources */,
-				1248941624B60EEA0016531F /* MainTableViewRouter.swift in Sources */,
-				1248941824B60F2E0016531F /* MainTableViewController.swift in Sources */,
-				1248941424B60ED30016531F /* MainTableViewPresenter.swift in Sources */,
+				1248941624B60EEA0016531F /* MenuViewRouter.swift in Sources */,
+				1248941824B60F2E0016531F /* MenuViewController.swift in Sources */,
+				12631BE924B767EC0047C426 /* AboutCellPresenter.swift in Sources */,
+				12631BE524B767AC0047C426 /* AboutCellRouter.swift in Sources */,
+				12631BDC24B744500047C426 /* Person.swift in Sources */,
+				12631BE324B767A10047C426 /* AboutCellAssemble.swift in Sources */,
+				12631BEE24BA05B90047C426 /* Extension UIView.swift in Sources */,
+				1248942324B652580016531F /* MenuToAddPersonAssemble.swift in Sources */,
+				1248941424B60ED30016531F /* MenuViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8R984P8F99;
 				INFOPLIST_FILE = TestFinch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8R984P8F99;
 				INFOPLIST_FILE = TestFinch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
