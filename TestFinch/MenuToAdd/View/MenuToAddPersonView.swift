@@ -12,13 +12,11 @@ protocol MenuToAddPersonViewOutput {
     func didTadAddPerson(name: String, attribute: String, image: UIImage)
 }
 
-final class MenuToAddPersonView: UIViewController, UINavigationControllerDelegate {
+final class MenuToAddPersonView: UIViewController {
     
     //MARK: - Properties
     
     var presenter: MenuToAddPersonViewOutput?
-    
-    private let picker = UIImagePickerController()
     
     private let imagePerson: UIImageView = {
         let imageView = UIImageView()
@@ -69,7 +67,6 @@ final class MenuToAddPersonView: UIViewController, UINavigationControllerDelegat
         imagePerson.addGestureRecognizer(tap)
         imagePerson.isUserInteractionEnabled = true
         
-        picker.delegate = self
         view.systemBackground()
         title = "Новое поле"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Готово", style: .plain, target: self, action: #selector(addAttribute))
@@ -104,10 +101,13 @@ final class MenuToAddPersonView: UIViewController, UINavigationControllerDelegat
     // MARK: - Actions
     
     @objc func openGallary(){
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        
-        present(picker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.allowsEditing = false
+            picker.sourceType = .photoLibrary
+            present(picker, animated: true, completion: nil)
+        }
     }
     
     @objc func addAttribute() {
@@ -133,7 +133,7 @@ extension MenuToAddPersonView: MenuToAddPersonInput {
 }
 
 //MARK: - UIImagePickerControllerDelegate
-extension MenuToAddPersonView: UIImagePickerControllerDelegate {
+extension MenuToAddPersonView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let choosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imagePerson.image = choosenImage
