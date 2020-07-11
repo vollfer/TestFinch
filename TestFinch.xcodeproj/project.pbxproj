@@ -41,12 +41,12 @@
 		1248941324B60ED30016531F /* MenuViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewPresenter.swift; sourceTree = "<group>"; };
 		1248941524B60EEA0016531F /* MenuViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewRouter.swift; sourceTree = "<group>"; };
 		1248941724B60F2E0016531F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		1248941924B62E1E0016531F /* MenuTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewManager.swift; path = ../../../../../Documents/MenuTableViewManager.swift; sourceTree = "<group>"; };
-		1248941B24B62E350016531F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = ../../../../../Documents/MainTableViewCell.swift; sourceTree = "<group>"; };
-		1248942224B652580016531F /* MenuToAddPersonAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonAssemble.swift; path = ../../../../../Documents/MenuToAddPersonAssemble.swift; sourceTree = "<group>"; };
-		1248942424B6529E0016531F /* MenuToAddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonView.swift; path = ../../../../../Documents/MenuToAddPersonView.swift; sourceTree = "<group>"; };
-		1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonRouter.swift; path = ../../../../../Documents/MenuToAddPersonRouter.swift; sourceTree = "<group>"; };
-		1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuToAddPersonPresenter.swift; path = ../../../../../Documents/MenuToAddPersonPresenter.swift; sourceTree = "<group>"; };
+		1248941924B62E1E0016531F /* MenuTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewManager.swift; sourceTree = "<group>"; };
+		1248941B24B62E350016531F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		1248942224B652580016531F /* MenuToAddPersonAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonAssemble.swift; sourceTree = "<group>"; };
+		1248942424B6529E0016531F /* MenuToAddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonView.swift; sourceTree = "<group>"; };
+		1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonRouter.swift; sourceTree = "<group>"; };
+		1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonPresenter.swift; sourceTree = "<group>"; };
 		12631BDB24B744500047C426 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		12631BE224B767A10047C426 /* AboutCellAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellAssemble.swift; sourceTree = "<group>"; };
 		12631BE424B767AC0047C426 /* AboutCellRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellRouter.swift; sourceTree = "<group>"; };
