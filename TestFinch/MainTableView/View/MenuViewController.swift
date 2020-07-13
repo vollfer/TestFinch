@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 protocol MenuViewControllerOutput {
     func tapAddButton()
@@ -47,6 +46,10 @@ final class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Назад"
+        navigationItem.backBarButtonItem = backItem
         
         CoreDataManager.shared.fetchEmployee()
         tableViewManager?.reloadData()
