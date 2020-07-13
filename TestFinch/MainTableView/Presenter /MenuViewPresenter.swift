@@ -28,7 +28,7 @@ extension MenuViewPresenter: MenuViewControllerOutput {
 
 //MARK: - MenuTableViewManagerDelegate
 extension MenuViewPresenter: MenuTableViewManagerDelegate {
-    func didSelect(person: Person) {
+    func didSelect(person: Persons) {
         router?.openAboutCellMenu(person: person)
     }
     

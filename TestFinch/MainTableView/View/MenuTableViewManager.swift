@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MenuTableViewManagerDelegate: class {
-    func didSelect(person: Person)
+    func didSelect(person: Persons)
 }
 
 protocol MenuTableViewInput {
@@ -44,15 +44,20 @@ extension MenuTableViewManager: MenuTableViewInput {
 // MARK: - UITableViewDataSource
 extension MenuTableViewManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PersonsDataSingleton.shared.persons.count
+        return CoreDataManager.shared.personss.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: indef, for: indexPath)
         guard let personCell = cell as? MenuTableViewCell else { return cell }
-        let persons = PersonsDataSingleton.shared.persons[indexPath.row]
-        personCell.setup(title: persons.title, description: persons.description, image: persons.imagePerson)
+        let personss = CoreDataManager.shared.personss[indexPath.row]
+        guard let imageData = personss.image,
+            let image = UIImage(data: imageData as Data),
+            let title = personss.title,
+            let description = personss.descriptionTitle else { return cell }
+        
+        personCell.setup(title: title, description: description, image: image)
         
         return personCell
     }
@@ -63,14 +68,15 @@ extension MenuTableViewManager: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let person = PersonsDataSingleton.shared.persons[indexPath.row]
-        delegate?.didSelect(person: person)
+        let personss = CoreDataManager.shared.personss[indexPath.row]
+        delegate?.didSelect(person: personss)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
-        
-        PersonsDataSingleton.shared.persons.remove(at: indexPath.row)
+        let task = CoreDataManager.shared.personss[indexPath.row]
+        CoreDataManager.shared.deleteEmployee(persons: task)
+        CoreDataManager.shared.personss.remove(at: indexPath.row)
         
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
