@@ -26,6 +26,7 @@ final class MenuViewRouter {
     }
 }
 
+//MARK: - MenuViewRouterInput
 extension MenuViewRouter: MenuViewRouterInput {
     func openAboutCellMenu(person: Persons) {
         let model = AboutCellAssemble.Model(person: person)
