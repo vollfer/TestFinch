@@ -18,15 +18,14 @@ final class MenuToAddPersonPresenter {
     
     weak var view: MenuToAddPersonInput?
     var router: MenuToAddPersonRouter?
-    private var personsDataSingleton = PersonsDataSingleton.shared
+    private var coreData = CoreDataManager.shared
     
 }
 
 //MARK: - MenuToAddPersonViewOutput
 extension MenuToAddPersonPresenter: MenuToAddPersonViewOutput {
-    func didTadAddPerson(name: String, attribute: String, image: UIImage) {
-        personsDataSingleton.persons.append(Person(title: name, description: attribute, imagePerson: image))
-        print(personsDataSingleton.persons)
+    func didTadAddPerson(title: String, description: String, image: UIImage) {
+        coreData.createEmployee(title: title, description: description, image: image)
         router?.returnMenu()
     }
 }

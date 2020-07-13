@@ -11,7 +11,7 @@ import UIKit
 final class AboutCellAssemble {
     
     struct Model {
-        let person: Person
+        let person: Persons
     }
     
     static func assembleModule(with model: Model) -> UIViewController {

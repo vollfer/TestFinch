@@ -7,7 +7,7 @@
 //
 
 protocol AboutCellInput: class {
-    func updateViewIfNeeded(with person: Person?)
+    func updateViewIfNeeded(with person: Persons?)
 }
 
 final class AboutCellPresenter {
@@ -16,11 +16,11 @@ final class AboutCellPresenter {
     
     weak var view: AboutCellInput?
     var router: AboutCellRouter?
-    private let person: Person?
+    private let person: Persons?
     
     // MARK: - Init
     
-    init(person: Person? = nil) {
+    init(person: Persons? = nil) {
         self.person = person
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 protocol MenuViewRouterInput: class {
     func openMenuToAdd()
-    func openAboutCellMenu(person: Person)
+    func openAboutCellMenu(person: Persons)
 }
 
 final class MenuViewRouter {
@@ -27,7 +27,7 @@ final class MenuViewRouter {
 }
 
 extension MenuViewRouter: MenuViewRouterInput {
-    func openAboutCellMenu(person: Person) {
+    func openAboutCellMenu(person: Persons) {
         let model = AboutCellAssemble.Model(person: person)
         let module = AboutCellAssemble.assembleModule(with: model)
         view.navigationController?.pushViewController(module, animated: true)

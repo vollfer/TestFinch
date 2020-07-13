@@ -53,11 +53,14 @@ final class MenuTableViewCell: UITableViewCell {
         heighConstraint.priority = .defaultHigh
         heighConstraint.isActive = true
         
+        let bottomConstraint = imagePerson.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+        bottomConstraint.priority = .defaultLow
+        bottomConstraint.isActive = true
+        
         NSLayoutConstraint.activate([
             
             imagePerson.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             imagePerson.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
-            imagePerson.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             imagePerson.widthAnchor.constraint(equalToConstant: 100),
             
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),

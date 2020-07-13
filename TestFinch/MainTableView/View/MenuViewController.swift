@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol MenuViewControllerOutput {
     func tapAddButton()
@@ -26,6 +27,14 @@ final class MenuViewController: UIViewController {
         return button
     }()
     
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.systemBackground()
+        
+        return tableView
+    }()
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -39,6 +48,7 @@ final class MenuViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        CoreDataManager.shared.fetchEmployee()
         tableViewManager?.reloadData()
     }
     
@@ -46,13 +56,9 @@ final class MenuViewController: UIViewController {
         
         title = "Главный экран"
         
-        view.systemBackground()
-        let tableView = UITableView()
-        tableView.systemBackground()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButton))
-        // navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addPersonButton)
-        //  addPersonButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
+        
+        view.systemBackground()
         
         view.addSubview(tableView)
         

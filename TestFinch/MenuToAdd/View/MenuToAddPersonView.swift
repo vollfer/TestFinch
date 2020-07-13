@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MenuToAddPersonViewOutput {
-    func didTadAddPerson(name: String, attribute: String, image: UIImage)
+    func didTadAddPerson(title: String, description: String, image: UIImage)
 }
 
 final class MenuToAddPersonView: UIViewController {
@@ -47,7 +47,7 @@ final class MenuToAddPersonView: UIViewController {
         textView.layer.cornerRadius = 4
         textView.autocapitalizationType = .none
         textView.backgroundColor = .white
-        textView.font = UIFont.systemFont(ofSize: 18)
+        textView.font = UIFont.systemFont(ofSize: 15)
         textView.textColor = .black
         
         return textView
@@ -81,8 +81,6 @@ final class MenuToAddPersonView: UIViewController {
             imagePerson.bottomAnchor.constraint(equalTo: titleTextFild.topAnchor, constant: -25),
             imagePerson.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25),
             imagePerson.widthAnchor.constraint(equalToConstant: 250),
-            //imagePerson.widthAnchor.constraint(equalToConstant: view.frame.width - 180),
-            // imagePerson.heightAnchor.constraint(equalToConstant: view.frame.height - 600),
             
             
             titleTextFild.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -111,11 +109,11 @@ final class MenuToAddPersonView: UIViewController {
     }
     
     @objc func addAttribute() {
-        guard let name = titleTextFild.text,
-            let attribute = descriptionTextView.text,
+        guard let title = titleTextFild.text,
+            let description = descriptionTextView.text,
             let image = imagePerson.image,
             !(imagePerson.image == UIImage(named: "image")) else { return showAlertOnAllCase() }
-        presenter?.didTadAddPerson(name: name, attribute: attribute, image: image)
+        presenter?.didTadAddPerson(title: title, description: description, image: image)
     }
     
     private func showAlertOnAllCase() {

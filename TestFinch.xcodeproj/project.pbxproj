@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1248396224BB5B32006B1CA7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248396124BB5B32006B1CA7 /* CoreDataManager.swift */; };
 		124893F524B60C6F0016531F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124893F424B60C6F0016531F /* AppDelegate.swift */; };
 		124893FF24B60C6F0016531F /* TestFinch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 124893FD24B60C6F0016531F /* TestFinch.xcdatamodeld */; };
 		1248940124B60C720016531F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1248940024B60C720016531F /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		1248942524B6529E0016531F /* MenuToAddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942424B6529E0016531F /* MenuToAddPersonView.swift */; };
 		1248942724B652BF0016531F /* MenuToAddPersonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */; };
 		1248942924B652CE0016531F /* MenuToAddPersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */; };
-		12631BDC24B744500047C426 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BDB24B744500047C426 /* Person.swift */; };
 		12631BE324B767A10047C426 /* AboutCellAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE224B767A10047C426 /* AboutCellAssemble.swift */; };
 		12631BE524B767AC0047C426 /* AboutCellRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE424B767AC0047C426 /* AboutCellRouter.swift */; };
 		12631BE724B767C40047C426 /* AboutCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12631BE624B767C40047C426 /* AboutCellViewController.swift */; };
@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1248396124BB5B32006B1CA7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		124893F124B60C6F0016531F /* TestFinch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFinch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124893F424B60C6F0016531F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124893FE24B60C6F0016531F /* TestFinch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestFinch.xcdatamodel; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		1248942424B6529E0016531F /* MenuToAddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonView.swift; sourceTree = "<group>"; };
 		1248942624B652BF0016531F /* MenuToAddPersonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonRouter.swift; sourceTree = "<group>"; };
 		1248942824B652CE0016531F /* MenuToAddPersonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToAddPersonPresenter.swift; sourceTree = "<group>"; };
-		12631BDB24B744500047C426 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		12631BE224B767A10047C426 /* AboutCellAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellAssemble.swift; sourceTree = "<group>"; };
 		12631BE424B767AC0047C426 /* AboutCellRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellRouter.swift; sourceTree = "<group>"; };
 		12631BE624B767C40047C426 /* AboutCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		12631BDA24B744250047C426 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				12631BDB24B744500047C426 /* Person.swift */,
+				1248396124BB5B32006B1CA7 /* CoreDataManager.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -340,10 +340,10 @@
 				1248941824B60F2E0016531F /* MenuViewController.swift in Sources */,
 				12631BE924B767EC0047C426 /* AboutCellPresenter.swift in Sources */,
 				12631BE524B767AC0047C426 /* AboutCellRouter.swift in Sources */,
-				12631BDC24B744500047C426 /* Person.swift in Sources */,
 				12631BE324B767A10047C426 /* AboutCellAssemble.swift in Sources */,
 				12631BEE24BA05B90047C426 /* Extension UIView.swift in Sources */,
 				1248942324B652580016531F /* MenuToAddPersonAssemble.swift in Sources */,
+				1248396224BB5B32006B1CA7 /* CoreDataManager.swift in Sources */,
 				1248941424B60ED30016531F /* MenuViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

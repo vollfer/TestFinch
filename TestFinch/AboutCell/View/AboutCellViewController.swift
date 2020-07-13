@@ -43,7 +43,7 @@ final class AboutCellView: UIViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 8
-        textView.font = UIFont.systemFont(ofSize: 18)
+        textView.font = UIFont.systemFont(ofSize: 15)
         textView.isEditable = false
         textView.backgroundColor = .white
         textView.textColor = .black
@@ -92,10 +92,11 @@ final class AboutCellView: UIViewController {
 
 //MARK: - AboutCellInput
 extension AboutCellView: AboutCellInput {
-    func updateViewIfNeeded(with person: Person?) {
+    func updateViewIfNeeded(with person: Persons?) {
+        guard let data = person?.image else { return }
         titleLabel.text = person?.title
-        descriptionText.text = person?.description
-        imagePerson.image = person?.imagePerson
+        descriptionText.text = person?.descriptionTitle
+        imagePerson.image = UIImage(data: data)
         title = person?.title
     }
 }
