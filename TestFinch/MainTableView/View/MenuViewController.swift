@@ -19,13 +19,6 @@ final class MenuViewController: UIViewController {
     var presenter: MenuViewControllerOutput?
     var tableViewManager: MenuTableViewInput?
     
-    private let addPersonButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "plus"), for: .normal)
-        
-        return button
-    }()
-    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +70,7 @@ final class MenuViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc func didTapAddButton() {
+    @objc private func didTapAddButton() {
         presenter?.tapAddButton()
     }
 }

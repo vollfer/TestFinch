@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewAssemble {
+final class MenuViewAssemble {
     
     static func assembleModuleNavigation() -> UINavigationController{
         

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-
+    
     func systemBackground(defaultColor: UIColor? = nil) {
         if #available(iOS 13.0, *) {
             self.backgroundColor = .systemBackground

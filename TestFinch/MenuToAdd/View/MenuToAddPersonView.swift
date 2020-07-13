@@ -53,6 +53,13 @@ final class MenuToAddPersonView: UIViewController {
         return textView
     }()
     
+    private let imageАctivityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        return indicator
+    }()
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -74,6 +81,7 @@ final class MenuToAddPersonView: UIViewController {
         view.addSubview(imagePerson)
         view.addSubview(titleTextFild)
         view.addSubview(descriptionTextView)
+        view.addSubview(imageАctivityIndicator)
         
         NSLayoutConstraint.activate([
             
@@ -82,6 +90,8 @@ final class MenuToAddPersonView: UIViewController {
             imagePerson.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25),
             imagePerson.widthAnchor.constraint(equalToConstant: 250),
             
+            imageАctivityIndicator.centerXAnchor.constraint(equalTo: imagePerson.centerXAnchor),
+            imageАctivityIndicator.centerYAnchor.constraint(equalTo: imagePerson.centerYAnchor),
             
             titleTextFild.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             titleTextFild.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -98,7 +108,9 @@ final class MenuToAddPersonView: UIViewController {
     
     // MARK: - Actions
     
-    @objc func openGallary(){
+    @objc private func openGallary(){
+        imageАctivityIndicator.isHidden = true
+        imageАctivityIndicator.startAnimating()
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let picker = UIImagePickerController()
             picker.delegate = self
@@ -108,10 +120,12 @@ final class MenuToAddPersonView: UIViewController {
         }
     }
     
-    @objc func addAttribute() {
+    @objc private func addAttribute() {
         guard let title = titleTextFild.text,
             let description = descriptionTextView.text,
             let image = imagePerson.image,
+            !title.isEmpty,
+            !description.isEmpty,
             !(imagePerson.image == UIImage(named: "image")) else { return showAlertOnAllCase() }
         presenter?.didTadAddPerson(title: title, description: description, image: image)
     }
@@ -130,18 +144,21 @@ extension MenuToAddPersonView: MenuToAddPersonInput {
     
 }
 
-//MARK: - UIImagePickerControllerDelegate
+//MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
 extension MenuToAddPersonView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let choosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imagePerson.image = choosenImage
         }
-        
+        imageАctivityIndicator.isHidden = false
+        imageАctivityIndicator.stopAnimating()
         dismiss(animated: true, completion: nil)
         print("image selected from gallery")
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imageАctivityIndicator.isHidden = false
+        imageАctivityIndicator.stopAnimating()
         dismiss(animated: true, completion: nil)
     }
 }
