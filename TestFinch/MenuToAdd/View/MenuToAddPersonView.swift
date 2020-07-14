@@ -74,10 +74,16 @@ final class MenuToAddPersonView: UIViewController {
         imagePerson.addGestureRecognizer(tap)
         imagePerson.isUserInteractionEnabled = true
         
+        let tapScreen = UITapGestureRecognizer(target: self, action: #selector(dismissKayboard(sender:)))
+        tapScreen.cancelsTouchesInView = false
+        
+        titleTextFild.delegate = self
+        
         view.systemBackground()
         title = "Новое поле"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Готово", style: .plain, target: self, action: #selector(addAttribute))
         
+        view.addGestureRecognizer(tapScreen)
         view.addSubview(imagePerson)
         view.addSubview(titleTextFild)
         view.addSubview(descriptionTextView)
@@ -130,6 +136,12 @@ final class MenuToAddPersonView: UIViewController {
         presenter?.didTadAddPerson(title: title, description: description, image: image)
     }
     
+    @objc private func dismissKayboard(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    //MARK: - Alert
+    
     private func showAlertOnAllCase() {
         let alert = UIAlertController(title: nil, message: "Заполните все поля", preferredStyle: .alert)
         
@@ -160,5 +172,12 @@ extension MenuToAddPersonView: UIImagePickerControllerDelegate, UINavigationCont
         imageАctivityIndicator.isHidden = false
         imageАctivityIndicator.stopAnimating()
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension MenuToAddPersonView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
